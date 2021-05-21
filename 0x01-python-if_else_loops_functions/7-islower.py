@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-def islower(a):
-	if ord(a) in range(97, 123):
-		return True
-	else:
-		return False
+for i in range(0, 10):
+    for j in range(0, 10):
+        if ((i == 8) and (j == 9)):
+            print("{}{}".format(i, j))
+        else:
+            if (i < j):
+                print("{}{},".format(i, j), end=" ")
