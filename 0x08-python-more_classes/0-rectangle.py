@@ -1,3 +1,10 @@
 #!/usr/bin/python3
+''' New Class that define a Rectangle '''
+
+
 class Rectangle:
-    pass
+
+    ''' New class '''
+
+
+pass
