@@ -17,7 +17,7 @@ class Rectangle:
     def __del__(self):
         """Object desctructor"""
         print("Bye rectangle...")
-        cls.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
@@ -85,9 +85,9 @@ class Rectangle:
         ''' Static method to compare two Rectangle of class Rectangle'''
 
         if not isinstance(rect_1, Rectangle):
-            raise ErrorType("rect_1 must be an instance of Rectangle")
+            raise TypeError("{} must be an instance of Rectangle".format(rect_1))
         if not isinstance(rect_2, Rectangle):
-            raise Errortype("rect_2 must be an instance of Rectangle")
+            raise TypeError("{} must be an instance of Rectangle".format(rect_2))
         if Rectangle.area(rect_1) >= Rectangle.area(rect_2):
             return(rect_1)
         else:
