@@ -70,7 +70,7 @@ class Rectangle:
 
         s = ""
 
-        if self.__width is 0 or self.__height is 0:
+        if self.__width == 0 or self.__height == 0:
             return str
         for i in range(self.__height):
             for j in range(self.__width):
@@ -85,9 +85,9 @@ class Rectangle:
         ''' Static method to compare two Rectangle of class Rectangle'''
 
         if not isinstance(rect_1, Rectangle):
-            raise TypeError("{} must be an instance of Rectangle".format(rect_1))
+            raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
-            raise TypeError("{} must be an instance of Rectangle".format(rect_2))
+            raise TypeError("rect_2 must be an instance of Rectangle")
         if Rectangle.area(rect_1) >= Rectangle.area(rect_2):
             return(rect_1)
         else:
