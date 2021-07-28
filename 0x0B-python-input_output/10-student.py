@@ -1,21 +1,26 @@
 #!/usr/bin/python3
-""" student module to define student class """
+"""
+A Student class that defines a Studen (module)
+"""
 
 
-class Student:
-    """ define student class """
+class Student():
+    """
+        A Student class that defines a Student
+    """
     def __init__(self, first_name, last_name, age):
-        """ init modules """
+        """
+            INIT
+        """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-        """ dictionary representation """
-        d = self.__dict__
-        if attrs is None:
-            return ({k: v for (k, v) in reversed(d.items())})
-        elif all(isinstance(x, str) for x in attrs):
-            return ({k: v for (k, v) in reversed(d.items()) if k in attrs})
-        else:
-            return ({k: v for (k, v) in reversed(d.items())})
+        """
+            retrieves a dictionary representation
+            of a Student instance
+        """
+        if type(attrs) is list and all([type(x) == str for x in attrs]):
+            return {k: v for k, v in self.__dict__.items() if k in attrs}
+        return(self.__dict__)
