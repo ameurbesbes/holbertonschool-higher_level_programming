@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-returns an object (Python data structure) represented by a JSON string
+JSON representation of an object (string)
 """
 
 import json
 
 
-def from_json_string(my_str):
+def to_json_string(my_obj):
     """
-    returns an object (Python data structure) represented by a JSON string:
+    returns the JSON representation of an object (string)
     """
-    return json.loads(my_str)
+    return json.dumps(my_obj)
