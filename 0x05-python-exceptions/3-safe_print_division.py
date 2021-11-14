@@ -1,9 +1,14 @@
 #!/usr/bin/python3
+"""
+ divides 2 integers and prints the result.
+    """
+
+
 def safe_print_division(a, b):
     try:
-        num = a / b
+        x = a / b
     except:
-        num = None
+        x = None
     finally:
-        print("Inside result: {}".format(num))
-        return num
+        print("Inside result: {}".format(x))
+        return x

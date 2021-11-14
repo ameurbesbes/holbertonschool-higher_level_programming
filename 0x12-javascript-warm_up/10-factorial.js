@@ -1,9 +1,10 @@
 #!/usr/bin/node
-function factorial (n) {
-  let result = 1;
-  for (let i = n; i >= 1; i--) {
-    result *= i;
+
+function factorialize (num) {
+  let MyRes = 1;
+  for (let i = 1; i <= num; i++) {
+    MyRes *= i;
   }
-  return result;
+  return (MyRes);
 }
-console.log(factorial(parseInt(process.argv[2])));
+console.log(factorialize(parseInt(process.argv[2])));
