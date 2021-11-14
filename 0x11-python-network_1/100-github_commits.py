@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-import requests
-import sys
 """
 List most recent to oldest commits (10) of the repository "rails" by the user
 "rails"
 """
+import requests
+import sys
+
 if __name__ == "__main__":
     repo_name = sys.argv[1]
     owner_name = sys.argv[2]
